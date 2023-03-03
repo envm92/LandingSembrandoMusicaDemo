@@ -295,3 +295,127 @@ footer div:nth-child(1) {
     height: 42px;
     margin: 10px;
 }
+
+/**
+Mobile styles
+**/
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px){
+    .whatsapp-button{
+        display: none;
+    }
+    #main {
+        min-height: 50vh;
+    }
+    #header {
+        width: 100%;
+    }
+    #header h3{
+        font-size: 16px;
+        max-inline-size: 180px;
+    }
+    #focus img {
+        height: 84px;
+    }
+    #focus h1 {
+        font-size: 36px;
+    }
+    #focus h2 {
+        font-size: 20px;
+    }
+
+    #description {
+        padding: 20px;
+        height: auto;
+    }
+
+    #description h2{
+        font-size: 24px;
+    }
+
+    #features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feature {
+        height: 160px;
+        width: 160px;
+    }
+
+    .feature div img {
+        height: 45px;
+    }
+    .feature div p {
+        font-size: 16px;
+        font-weight: 300;
+        padding-top: 8px;
+        text-align: center;
+        max-width: 160px;
+    }
+
+    #cards-description {
+        display: flex;
+        flex-direction: column;
+    }
+    #cards-description div{
+        direction: ltr;
+    }
+    #cards-description div:nth-child(1) {
+       padding: 40px 20px;
+    }
+    #cards-description div h2, #cards-description div p {
+        margin: 0;
+    }
+
+    #cards-description div h2 {
+        font-size: 24px;
+    }
+
+    #cards-description div p {
+        font-size: 16px;
+    }
+
+    #process {
+        height: auto;
+        padding: 20px;
+    }
+
+    #process h1{
+       font-size: 32px;
+    }
+
+    #steps {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #steps div {
+        width: 300px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #steps div header span {
+        height: 50px;
+        width: 50px;
+        font-size: 32px;
+        font-weight: 600;
+        margin: 20px 15px 10px 15px;
+    }
+
+    #steps div header h2 {
+        font-size: 24px;
+    }
+
+    #steps div p {
+        padding-inline: 10px;
+        font-size: 20px;
+        max-inline-size: 256px;
+        padding-left: 20px;
+    }
+
+}
