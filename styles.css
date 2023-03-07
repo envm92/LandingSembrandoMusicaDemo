@@ -1,18 +1,27 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+/* Reset styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
+/* Global styles */
+body {
     font-family: 'Montserrat';
-    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 h1 {
     font-size: 40px;
     font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
 }
 
 #main {
@@ -33,6 +42,17 @@ h1 {
     color: white;
 }
 
+#main h3 {
+    font-weight: 300;
+    font-size: 16px;
+    color: #E5E5E5a3;
+}
+
+#main h3 strong {
+    color: white;
+    font-weight: 500;
+}
+
 #focus {
     display: flex;
     flex-direction: column;
@@ -43,22 +63,6 @@ h1 {
 
 #focus img {
     max-height: 20vh;
-}
-
-h2 {
-    font-size: 24px;
-    font-weight: 400;
-}
-
-#main h3 {
-    font-weight: 300;
-    font-size: 16px;
-    color: #E5E5E5a3;
-}
-
-#main h3 strong {
-    color: white;
-    font-weight: 500;
 }
 
 #description, #process, #ambassadors {
@@ -243,13 +247,16 @@ h2 {
     font-weight: 600;
     margin-bottom: 0;
 }
+
 #sale div span p:nth-child(2) {
     margin-top: -20px;
 }
+
 #sale div span p small {
     font-size: 24px;
     font-weight: 400;
 }
+
 #sale div span h4 {
     text-decoration: line-through;
     font-size: 24px;
@@ -261,20 +268,26 @@ h2 {
     font-size: 36px;
 }
 
-#ambassadors{
- height: 900px;
+#ambassadors {
+    height: 900px;
 }
-#ambassadors h2{
+
+#ambassadors h2 {
     font-size: 40px;
     font-weight: 600;
 }
+
+#ambassadors h2:nth-child(2) {
+    display: none;
+}
+
 #ambassadors div {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 }
 
-#ambassadors div img{
+#ambassadors div img {
     height: 356px;
     border: 1px solid white;
 }
@@ -285,53 +298,56 @@ footer {
     display: flex;
     height: 200px;
 }
+
 footer div:nth-child(1) {
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #social-media img {
     height: 42px;
     margin: 10px;
 }
 
-/**
-Mobile styles
-**/
-
-@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 812px){
-    .whatsapp-button{
+/* Dispositivos móviles */
+@media only screen and (max-width: 767px) {
+    .whatsapp-button {
         display: none;
     }
+
     #main {
         min-height: 50vh;
+        padding: 5vh;
     }
+
     #header {
         width: 100%;
     }
-    #header h3{
+
+    #header h3 {
         font-size: 16px;
         max-inline-size: 180px;
     }
+
     #focus img {
         height: 84px;
     }
+
     #focus h1 {
         font-size: 36px;
     }
+
     #focus h2 {
         font-size: 20px;
     }
 
     #description {
-        padding: 20px;
-        height: auto;
+        height: 50vh;
     }
 
-    #description h2{
+    #description h2 {
         font-size: 24px;
     }
 
@@ -341,13 +357,14 @@ and (max-device-width: 812px){
     }
 
     .feature {
-        height: 160px;
-        width: 160px;
+        height: 130px;
+        width: 130px;
     }
 
     .feature div img {
         height: 45px;
     }
+
     .feature div p {
         font-size: 16px;
         font-weight: 300;
@@ -360,12 +377,15 @@ and (max-device-width: 812px){
         display: flex;
         flex-direction: column;
     }
-    #cards-description div{
+
+    #cards-description div {
         direction: ltr;
     }
+
     #cards-description div:nth-child(1) {
-       padding: 40px 20px;
+        padding: 40px 20px;
     }
+
     #cards-description div h2, #cards-description div p {
         margin: 0;
     }
@@ -376,15 +396,16 @@ and (max-device-width: 812px){
 
     #cards-description div p {
         font-size: 16px;
+        max-inline-size: 80vw;
     }
 
     #process {
-        height: auto;
-        padding: 20px;
+        height: fit-content;
+        padding: 20px 0;
     }
 
-    #process h1{
-       font-size: 32px;
+    #process h1 {
+        font-size: 32px;
     }
 
     #steps {
@@ -418,4 +439,75 @@ and (max-device-width: 812px){
         padding-left: 20px;
     }
 
+    #sale {
+        height: fit-content;
+        padding: 20px;
+    }
+
+    #sale h2 {
+        font-size: 24px;
+    }
+
+    #sale div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    #sale div span {
+        width: 250px;
+        height: 170px;
+    }
+
+    #sale div span p, #sale div span h3 {
+        font-size: 28px;
+    }
+
+    #sale div span p small, #sale div span h4 {
+        font-size: 18px;
+    }
+
+    #ambassadors {
+        height: fit-content;
+    }
+
+    #ambassadors h2:nth-child(1) {
+        display: none;
+    }
+
+    #ambassadors div {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    #ambassadors div img {
+        height: auto;
+        width: 35vw;
+    }
+
+    footer {
+        display: flex;
+        height: auto;
+    }
+
+    footer div:nth-child(1) {
+        display: none;
+    }
+
+    #social-media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Tablets en orientación vertical */
+@media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    /* Estilos para tablets en orientación vertical */
+}
+
+/* Tablets en orientación horizontal */
+@media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    /* Estilos para tablets en orientación horizontal */
 }
